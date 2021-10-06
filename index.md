@@ -1,5 +1,3 @@
-## SIGNET: Efficient Neural Representations For Light Fields 
-Brandon Yushan Feng&nbsp;&nbsp;&nbsp;&nbsp;Amitabh Varshney International Conference on Computer Vision (ICCV 2021) - Oral
 
 ## Abstract
 
