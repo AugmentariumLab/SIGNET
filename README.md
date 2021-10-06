@@ -2,8 +2,8 @@
 This repository contains the training and inference code for SIGNET: Efficient Neural Representations For Light Fields, published at ICCV 2021.
 
 ## Requirements
-CUDA
-PyTorch
+* CUDA
+* PyTorch
 
 ## Getting started
 
