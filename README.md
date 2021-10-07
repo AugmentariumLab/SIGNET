@@ -31,4 +31,4 @@ If you use this in your research, please reference it as:
 
 or
 
-    Brandon Y, Feng and Amitabh Varshney. 2021. SIGNET: Efficient Neural Representations for Light Fields. International Conference on Computer Vision (ICCV 2021).
+    Brandon Y. Feng and Amitabh Varshney. 2021. SIGNET: Efficient Neural Representations for Light Fields. International Conference on Computer Vision (ICCV 2021).
