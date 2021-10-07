@@ -1,5 +1,5 @@
 # SIGNET: Efficient Neural Representations for Light Fields
-This repository contains the training and inference code for SIGNET: Efficient Neural Representations for Light Fields, published at ICCV 2021.
+This repository contains the demo code for SIGNET: Efficient Neural Representations for Light Fields, published at ICCV 2021. We provide the Python implementation of Gegenbauer embedding as well as the network used to encode the light fields.
 
 ## Requirements
 * CUDA
@@ -12,7 +12,7 @@ This repository contains the training and inference code for SIGNET: Efficient N
 To decode an image at light field view point (u, v), please run
 * `python demo_decode.py -u [u] -v [v] --scene [scene_name]`
 u and v are integers within the range [0, 16]. 
-For demo we provide the pretrained weights for scenes "lego" and "tarot" in the `encoded_weights` folder.
+We provide the pretrained weights for scenes "lego" and "tarot" in the `encoded_weights` folder.
 
 ## Related Publication
 
