@@ -17,7 +17,7 @@ Training should begin following this command.
 You should find the trained weights and validation output at folder "{ROOT}/{exp_name}" during training.
 The image resolution is assumed to be less than 1024x1024. If you work on data with higher resolution, please use the "--img_W" and "--img_H" arguments to adjust accordingly.
 
-To decode light field view at (u, v) from trained weights, please run "python eval_net.py --exp_dir {ROOT}/{exp_name} -u u -v v"
+To decode light field view at (u, v) from trained weights, please run "python eval_net.py --exp_dir {ROOT}/{exp_name} -u u -v v" For the demo scenes, the u/v coordinates are restricted to integers between 0 and 16.
 
 The purpose of these scripts is to provide a simple implementation that helps you kickstart your own experiments.
 If you encounter any error or have any suggestion, please don't hesitate to reach out to yfeng97@umd.edu. Thank you!
