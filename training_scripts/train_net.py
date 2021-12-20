@@ -116,6 +116,9 @@ if __name__ == "__main__":
 
             if it % val_freq == 0:
                 val_inp_t = val_inp_t.view(-1, val_inp_t.shape[-1])
+                val_inp_t[..., :2] /= 17
+                val_inp_t[..., 2] /= args.img_W
+                val_inp_t[..., 3] /= args.img_H
                 b_size = val_inp_t.shape[0] // 16
                 model.eval()
                 with torch.no_grad():
