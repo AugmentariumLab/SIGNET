@@ -69,7 +69,7 @@ class SIGNET(nn.Module):
             else:
                 layer = SineLayer(hidden_features, hidden_features, is_first=False, is_res=self.with_res, omega_0=hidden_omega_0)
             if with_norm:
-                layer = nn.Sequential(layer, nn.LayerNorm(hidden_features, elementwise_affine=False))
+                layer = nn.Sequential(layer, nn.LayerNorm(hidden_features, elementwise_affine=True))
             setattr(self, f"encoding_{i+1}", layer)
 
         final_linear = nn.Linear(hidden_features, out_features)
@@ -123,7 +123,8 @@ if __name__ == "__main__":
     parser.add_argument("-v", type=int, default=0, help="angular dimension v")
     parser.add_argument("-b", type=int, default=4, help="batch size in inference")
     parser.add_argument("--scene", type=str, default="lego", help="lego or tarot")
-    
+    args = parser.parse_args()
+
     OUT_DIR = f'./decoded_images/{args.scene}'
     if not os.path.exists(OUT_DIR):
         os.makedirs(OUT_DIR)
@@ -133,7 +134,7 @@ if __name__ == "__main__":
 
     model = SIGNET(hidden_layers=8, alpha=0.5, hidden_features=512, in_feature_ratio=1, with_norm=True, with_res=True)
     m_state_dict = torch.load(f'./encoded_weights/model_{args.scene}.pth')
-    model.load_state_dict(m_state_dict, strict=False)
+    model.load_state_dict(m_state_dict)
     model.eval()
     model = model.to(device)
     val_inp_t = get_LF_val(u=args.u, v=args.v).to(device)
